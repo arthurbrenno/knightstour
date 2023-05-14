@@ -1,6 +1,7 @@
 #include "lib/knight/k_functions.h"
 #include "lib/board/b_aspects.h"
 #include <stdio.h>
+#include <ctype.h>
 
 #define BUFFER_SIZE 5
 
@@ -29,9 +30,9 @@ int main() {
 		printf("Movement: ");
 		
 		char buffer[BUFFER_SIZE];
-		memset(buffer, 0, BUFFER_SIZE);
+		//memset(buffer, 0, BUFFER_SIZE);
 		if (fgets(buffer, BUFFER_SIZE, stdin)) {
-			if (atoi(buffer)) {
+			if (isdigit(buffer[0])) {
 				movement = atoi(buffer);
 				move(&my_knight, board, atoi(buffer));
 			}

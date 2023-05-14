@@ -13,33 +13,31 @@ int main() {
 
 	Knight my_knight = {
 		.character = 'k', 
-		.current_row = 0, 
-		.current_col = 0
+		.xpos = 0, 
+		.ypos = 0
 	};
+
 	FillBoard(fill_character, board);
-	board[my_knight.current_row][my_knight.current_col] = my_knight.character;
+	board[my_knight.xpos][my_knight.ypos] = my_knight.character;
 	int movement = 0;
 	while (movement != -9) {
 		system("cls");
 		PrintBoard(board);
-		printf("  %s     %s  \n", "2", "1");
-		printf("%s         %s\n", "3", "0");
+		printf("  %s     %s  \n", (ckmov(&my_knight, board, 2)) ? "2" : " ", (ckmov(&my_knight, board, 1)) ? "1" : " ");
+		printf("%s         %s\n", (ckmov(&my_knight, board, 3)) ? "3" : " ", (ckmov(&my_knight, board, 0)) ? "0" : " ");
 		printf("     K     \n");
-		printf("%s         %s\n", "4", "7");
-		printf("  %s     %s  \n", "5", "6");
+		printf("%s         %s\n", (ckmov(&my_knight, board, 4)) ? "4" : " ", (ckmov(&my_knight, board, 7)) ? "7" : " ");
+		printf("  %s     %s  \n", (ckmov(&my_knight, board, 5)) ? "5" : " ", (ckmov(&my_knight, board, 6)) ? "6" : " ");
 		printf("Movement: ");
 		
 		char buffer[BUFFER_SIZE];
-		//memset(buffer, 0, BUFFER_SIZE);
-		if (fgets(buffer, BUFFER_SIZE, stdin)) {
-			if (isdigit(buffer[0])) {
-				movement = atoi(buffer);
-				move(&my_knight, board, atoi(buffer));
-			}
+		fgets(buffer, BUFFER_SIZE - 1, stdin);
+		if (isdigit(buffer[0])) {
+			movement = atoi(buffer);
+			move(&my_knight, board, atoi(buffer));
 		}
 	}
 	
-
 	return 0;
 }
 
@@ -59,5 +57,6 @@ void FillBoard(char fill_character, char board[][BOARD_SIZE]) {
 		}
 	}
 }
+
 
 

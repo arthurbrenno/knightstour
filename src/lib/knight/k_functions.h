@@ -6,8 +6,8 @@
 
 //piece structure
 typedef struct {
-	unsigned int current_row;
-	unsigned int current_col;
+	unsigned int xpos;
+	unsigned int ypos;
 	char character;
 } Knight;
 
@@ -21,5 +21,16 @@ typedef struct {
  * @return 1 if suceeds, 0 if movement is not possible.
  */
 int move(Knight* knight, char board[][BOARD_SIZE], int movement);
+
+/**
+ * Check if the movement is possible.
+ *
+ * This will take a movement and check if
+ * it exceeds the board.
+ *
+ * @param Knight struct, a chess board and a movement type
+ * @return 1 if possible, 0 if movement is not possible.
+ */
+int ckmov(Knight* knight, char board[][BOARD_SIZE], int movement);
 
 #endif

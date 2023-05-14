@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\User\source\repos\knightstour\src\main.c(22,3): warning C4013: 'system' undefined; assuming extern returning int
+C:\Users\User\source\repos\knightstour\src\main.c(32,3): warning C4013: 'memset' undefined; assuming extern returning int
+C:\Users\User\source\repos\knightstour\src\main.c(34,8): warning C4013: 'atoi' undefined; assuming extern returning int
+C:\Users\User\source\repos\knightstour\src\main.c(34,28): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+  knightstour.vcxproj -> C:\Users\User\source\repos\knightstour\x64\Debug\knightstour.exe

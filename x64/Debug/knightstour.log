@@ -1,4 +1,5 @@
-﻿  main.c
-C:\Users\User\source\repos\knightstour\src\main.c(23,3): warning C4013: 'system' undefined; assuming extern returning int
-C:\Users\User\source\repos\knightstour\src\main.c(35,15): warning C4013: 'atoi' undefined; assuming extern returning int
+﻿  k_functions.c
+  main.c
+C:\Users\User\source\repos\knightstour\src\main.c(23,9): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   knightstour.vcxproj -> C:\Users\User\source\repos\knightstour\x64\Debug\knightstour.exe

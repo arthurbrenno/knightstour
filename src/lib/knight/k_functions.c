@@ -1,8 +1,8 @@
 #include "k_functions.h"
 
-int move(Knight* knight, char board[][8], int movement) {
+int move(Knight* knight, char board[][8], int movement, int* counter) {
 	//remove knight old position
-	board[(*knight).xpos][(*knight).ypos] = fill_character;
+	board[(*knight).xpos][(*knight).ypos] = '#';
 
 	//update the position
 	(*knight).xpos += vertical[movement];
@@ -23,6 +23,7 @@ int move(Knight* knight, char board[][8], int movement) {
 	}
 	//place to new position
 	board[(*knight).xpos][(*knight).ypos] = (*knight).character;
+	(*counter)++;
 	return 1;
 }
 

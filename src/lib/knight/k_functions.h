@@ -20,7 +20,7 @@ typedef struct {
  * @param Knight struct, a chess board and a movement type
  * @return 1 if suceeds, 0 if movement is not possible.
  */
-int move(Knight* knight, char board[][BOARD_SIZE], int movement);
+int move(Knight* knight, char board[][BOARD_SIZE], int movement, int* counter);
 
 /**
  * Check if the movement is possible.

@@ -20,6 +20,7 @@
 
 void PrintBoard(char const board[][BOARD_SIZE]);
 void FillBoard(char fill_character, char board[][BOARD_SIZE]);
+void SetBoardMoves(const Knight knight, char board[][BOARD_SIZE]);
 
 int main() {
 	char board[BOARD_SIZE][BOARD_SIZE];
@@ -37,30 +38,8 @@ int main() {
 
 	while (movement != 999) {
 		system("cls");
-		if (ckmov(&my_knight, board, 0) && !wasvisited(board, my_knight.xpos + vertical[0], my_knight.ypos + horizontal[0])) {
-			board[my_knight.xpos + vertical[0]][my_knight.ypos + horizontal[0]] = '0';
-		}
-		if (ckmov(&my_knight, board, 1) && !wasvisited(board, my_knight.xpos + vertical[1], my_knight.ypos + horizontal[1])) {
-			board[my_knight.xpos + vertical[1]][my_knight.ypos + horizontal[1]] = '1';
-		}
-		if (ckmov(&my_knight, board, 2) && !wasvisited(board, my_knight.xpos + vertical[2], my_knight.ypos + horizontal[2])) {
-			board[my_knight.xpos + vertical[2]][my_knight.ypos + horizontal[2]] = '2';
-		}
-		if (ckmov(&my_knight, board, 3) && !wasvisited(board, my_knight.xpos + vertical[3], my_knight.ypos + horizontal[3])) {
-			board[my_knight.xpos + vertical[3]][my_knight.ypos + horizontal[3]] = '3';
-		}
-		if (ckmov(&my_knight, board, 4) && !wasvisited(board, my_knight.xpos + vertical[4], my_knight.ypos + horizontal[4])) {
-			board[my_knight.xpos + vertical[4]][my_knight.ypos + horizontal[4]] = '4';
-		}
-		if (ckmov(&my_knight, board, 5) && !wasvisited(board, my_knight.xpos + vertical[5], my_knight.ypos + horizontal[5])) {
-			board[my_knight.xpos + vertical[5]][my_knight.ypos + horizontal[5]] = '5';
-		}
-		if (ckmov(&my_knight, board, 6) && !wasvisited(board, my_knight.xpos + vertical[6], my_knight.ypos + horizontal[6])) {
-			board[my_knight.xpos + vertical[6]][my_knight.ypos + horizontal[6]] = '6';
-		}
-		if (ckmov(&my_knight, board, 7) && !wasvisited(board, my_knight.xpos + vertical[7], my_knight.ypos + horizontal[7])) {
-			board[my_knight.xpos + vertical[7]][my_knight.ypos + horizontal[7]] = '7';
-		}
+		printf("[GOAl: Visit all places only once.]\n");
+		SetBoardMoves(my_knight, board);
 		PrintBoard(board);
 		printf("  %s     %s  \n", (ckmov(&my_knight, board, 2) && !wasvisited(board, my_knight.xpos + vertical[2], my_knight.ypos + horizontal[2])) ? "2" : " ", (ckmov(&my_knight, board, 1) && !wasvisited(board, my_knight.xpos + vertical[1], my_knight.ypos + horizontal[1])) ? "1" : " ");
 		printf("%s         %s\n", (ckmov(&my_knight, board, 3) && !wasvisited(board, my_knight.xpos + vertical[3], my_knight.ypos + horizontal[3])) ? "3" : " ", (ckmov(&my_knight, board, 0) && !wasvisited(board, my_knight.xpos + vertical[0], my_knight.ypos + horizontal[0])) ? "0" : " ");
@@ -68,8 +47,6 @@ int main() {
 		printf("%s         %s\n", (ckmov(&my_knight, board, 4) && !wasvisited(board, my_knight.xpos + vertical[4], my_knight.ypos + horizontal[4])) ? "4" : " ", (ckmov(&my_knight, board, 7) && !wasvisited(board, my_knight.xpos + vertical[7], my_knight.ypos + horizontal[7])) ? "7" : " ");
 		printf("  %s     %s  \n", (ckmov(&my_knight, board, 5) && !wasvisited(board, my_knight.xpos + vertical[5], my_knight.ypos + horizontal[5])) ? "5" : " ", (ckmov(&my_knight, board, 6) && !wasvisited(board, my_knight.xpos + vertical[6], my_knight.ypos + horizontal[6])) ? "6" : " ");
 		
-
-
 		/*User input version */
 		printf("Movement: ");
 		char buffer[BUFFER_SIZE];
@@ -92,11 +69,12 @@ int main() {
 }
 void PrintBoard(char const board[][BOARD_SIZE]) {
 	for (int i = 0; i < BOARD_SIZE; ++i) {
+		printf("\n\n");
 		printf("    ");
 		for (int j = 0; j < BOARD_SIZE; ++j) {
-			printf("%c |    ", board[i][j]);
+			printf("%c |      ", board[i][j]);
 		}
-		printf("\n"); printf("\n");
+		
 	}
 }
 
@@ -107,6 +85,33 @@ void FillBoard(char fill_character, char board[][BOARD_SIZE]) {
 				board[i][j] = fill_character;
 			}
 		}
+	}
+}
+
+void SetBoardMoves(const Knight knight, char board[][BOARD_SIZE]) {
+	if (ckmov(&knight, board, 0) && !wasvisited(board, knight.xpos + vertical[0], knight.ypos + horizontal[0])) {
+		board[knight.xpos + vertical[0]][knight.ypos + horizontal[0]] = '0';
+	}
+	if (ckmov(&knight, board, 1) && !wasvisited(board, knight.xpos + vertical[1], knight.ypos + horizontal[1])) {
+		board[knight.xpos + vertical[1]][knight.ypos + horizontal[1]] = '1';
+	}
+	if (ckmov(&knight, board, 2) && !wasvisited(board, knight.xpos + vertical[2], knight.ypos + horizontal[2])) {
+		board[knight.xpos + vertical[2]][knight.ypos + horizontal[2]] = '2';
+	}
+	if (ckmov(&knight, board, 3) && !wasvisited(board, knight.xpos + vertical[3], knight.ypos + horizontal[3])) {
+		board[knight.xpos + vertical[3]][knight.ypos + horizontal[3]] = '3';
+	}
+	if (ckmov(&knight, board, 4) && !wasvisited(board, knight.xpos + vertical[4], knight.ypos + horizontal[4])) {
+		board[knight.xpos + vertical[4]][knight.ypos + horizontal[4]] = '4';
+	}
+	if (ckmov(&knight, board, 5) && !wasvisited(board, knight.xpos + vertical[5], knight.ypos + horizontal[5])) {
+		board[knight.xpos + vertical[5]][knight.ypos + horizontal[5]] = '5';
+	}
+	if (ckmov(&knight, board, 6) && !wasvisited(board, knight.xpos + vertical[6], knight.ypos + horizontal[6])) {
+		board[knight.xpos + vertical[6]][knight.ypos + horizontal[6]] = '6';
+	}
+	if (ckmov(&knight, board, 7) && !wasvisited(board, knight.xpos + vertical[7], knight.ypos + horizontal[7])) {
+		board[knight.xpos + vertical[7]][knight.ypos + horizontal[7]] = '7';
 	}
 }
 

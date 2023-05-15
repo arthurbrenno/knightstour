@@ -1,2 +1,10 @@
 ﻿  main.c
+C:\Users\User\source\repos\knightstour\src\main.c(94,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(97,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(100,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(103,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(106,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(109,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(112,19): warning C4090: 'function': different 'const' qualifiers
+C:\Users\User\source\repos\knightstour\src\main.c(115,19): warning C4090: 'function': different 'const' qualifiers
   knightstour.vcxproj -> C:\Users\User\source\repos\knightstour\x64\Debug\knightstour.exe

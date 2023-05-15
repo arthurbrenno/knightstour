@@ -1,2 +1,5 @@
-﻿  main.c
+﻿  b_functions.c
+  k_functions.c
+  main.c
+  Generating Code...
   knightstour.vcxproj -> C:\Users\User\source\repos\knightstour\x64\Debug\knightstour.exe

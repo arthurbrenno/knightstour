@@ -1,5 +1,2 @@
-﻿  k_functions.c
-  main.c
-C:\Users\User\source\repos\knightstour\src\main.c(23,9): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  main.c
   knightstour.vcxproj -> C:\Users\User\source\repos\knightstour\x64\Debug\knightstour.exe

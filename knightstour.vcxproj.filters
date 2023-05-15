@@ -21,6 +21,9 @@
     <ClCompile Include="src\lib\knight\k_functions.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lib\board\b_functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\lib\knight\k_functions.h">
@@ -29,7 +32,10 @@
     <ClInclude Include="src\lib\knight\k_movements.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\lib\board\b_aspects.h">
+    <ClInclude Include="src\lib\board\b_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\knight\k_piece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

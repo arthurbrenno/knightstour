@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\lib\board\b_functions.c" />
     <ClCompile Include="src\lib\knight\k_functions.c" />
     <ClCompile Include="src\main.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\lib\board\b_aspects.h" />
+    <ClInclude Include="src\lib\knight\k_piece.h" />
+    <ClInclude Include="src\lib\board\b_functions.h" />
     <ClInclude Include="src\lib\knight\k_functions.h" />
     <ClInclude Include="src\lib\knight\k_movements.h" />
   </ItemGroup>

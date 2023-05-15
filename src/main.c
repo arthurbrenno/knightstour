@@ -31,7 +31,7 @@ int main() {
 		.xpos = 0, 
 		.ypos = 0
 	};
-	memset(&board, '.', sizeof board);
+	memset(&board, ' ', sizeof board);
 	board[my_knight.xpos][my_knight.ypos] = my_knight.character;
 	unsigned int movement = 0;
 
@@ -79,7 +79,7 @@ int main() {
 			if (wasvisited(board, my_knight.xpos + vertical[movement], my_knight.ypos + horizontal[movement])) {
 				break;
 			}
-			move(&my_knight, board, atoi(buffer), &house_count);
+			move(&my_knight, board, atoi(buffer));
 		}
 		FillBoard(fill_character, board);
 		//memset(&board, ' ', sizeof board);
@@ -92,10 +92,11 @@ int main() {
 }
 void PrintBoard(char const board[][BOARD_SIZE]) {
 	for (int i = 0; i < BOARD_SIZE; ++i) {
+		printf("    ");
 		for (int j = 0; j < BOARD_SIZE; ++j) {
-			printf("%c |", board[i][j]);
+			printf("%c |    ", board[i][j]);
 		}
-		printf("\n");
+		printf("\n"); printf("\n");
 	}
 }
 

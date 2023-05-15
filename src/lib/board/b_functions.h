@@ -5,7 +5,7 @@
 #include "../knight/k_piece.h"
 
 //b_functions.h fill_character
-static const char fill_character = '.';
+static const char fill_character = ' ';
 
 int wasvisited(char board[][8], int x, int y);
 

@@ -14,7 +14,7 @@
  * @param Knight struct, a chess board and a movement type
  * @return 1 if suceeds, 0 if movement is not possible.
  */
-int move(Knight* knight, char board[][8], int movement, int* counter);
+int move(Knight* knight, char board[][8], int movement);
 
 /**
  * Check if the movement is possible.

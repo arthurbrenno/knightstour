@@ -89,7 +89,7 @@ void PrintBoard(char const board[][BOARD_SIZE]) {
 			printf("-------+");
 		}
 		printf("\n");
-		printf(" %d |", i + 1);
+		printf(" %d |", 8 - i);
 		for (int j = 0; j < BOARD_SIZE; ++j) {
 			printf("   %c   |", board[i][j]);
 		}

@@ -6,7 +6,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://cdn.discordapp.com/attachments/815753127537410102/1111677895685984316/image.png" alt="project-screenshot" width="900" height="auto/">
+<img src="https://cdn.discordapp.com/attachments/815753127537410102/1111682000844226600/image.png" alt="project-screenshot" width="900" height="auto/">
 
   
   

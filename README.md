@@ -15,7 +15,7 @@
 Here're some of the project's best features:
 
 *   Real time help
-*   Visited places blocking
+*   Visited places blocking (bound checking
 *   Board zoom
 
 <h2>🛠️ Installation Steps:</h2>

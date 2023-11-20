@@ -14,7 +14,7 @@
 
 Here're some of the project's best features:
 
-*   Real time help
+*   Real time help (zoom)
 *   Visited places blocking (bound checking
 *   Board zoom
 
